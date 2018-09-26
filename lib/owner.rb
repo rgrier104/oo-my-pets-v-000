@@ -4,9 +4,7 @@ class Owner
   attr_reader :species
 
   @@all = []
-  @@count_fish = 0
-  @@count_dog = 0
-  @@count_cat = 0
+
 
   def initialize(species)
     @species = species
