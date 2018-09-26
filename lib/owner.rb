@@ -10,9 +10,9 @@ class Owner
     @species = species
     @pets = {fishes: [], cats: [], dogs: []}
     @@all << self
-    @@count_fish = 0
-    @@count_dog = 0
-    @@count_cat = 0
+    @count_fish = 0
+    @count_dog = 0
+    @count_cat = 0
   end
 
   def say_species
@@ -34,19 +34,19 @@ class Owner
   def buy_fish(name)
     name = Fish.new(name)
     @pets[:fishes] << name
-    @@count_fish += 1
+    @count_fish += 1
   end
 
   def buy_cat(name)
     name = Cat.new(name)
     @pets[:cats] << name
-    @@count_cat += 1
+    @count_cat += 1
   end
 
   def buy_dog(name)
     name = Dog.new(name)
     @pets[:dogs] << name
-    @@count_dog += 1
+    @count_dog += 1
   end
 
   def walk_dogs
