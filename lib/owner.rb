@@ -26,6 +26,10 @@ class Owner
     @@all = []
   end
 
+  def count
+    @@all.size
+  end
+
   def buy_fish(name)
     name = Fish.new(name)
     @pets[:fishes] << name
